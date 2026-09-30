@@ -12,9 +12,28 @@ import akshare as ak
 # 想跟踪的基金：名称里包含以下任一关键词即会被收录
 KEYWORDS = ["纳斯达克"]
 
+# 名称含以下关键词的直接排除（美元现汇/现钞份额等）
+EXCLUDE_KEYWORDS = ["美元"]
+
+# 非 A 类份额的后缀字母（C/E/I/D/B 类都排除，只留 A 类或无字母后缀的）
+NON_A_SUFFIXES = ("B", "C", "D", "E", "I")
+
 # 若想精确指定基金，可改为按代码筛选，例如：
 # FUND_CODES = ["015299", "016452", "161130", "270042"]
 FUND_CODES = []
+
+
+def is_target_fund(name):
+    """只保留：场外、人民币、A类（或无份额后缀）的基金"""
+    if any(k in name for k in EXCLUDE_KEYWORDS):
+        return False
+    # 排除场内 ETF 本体（名字带 ETF 但不是联接基金的）
+    if "ETF" in name and "联接" not in name:
+        return False
+    # 排除非 A 类份额（名称以 C/E/I 等字母结尾的）
+    if name.strip()[-1] in NON_A_SUFFIXES:
+        return False
+    return True
 
 
 def fetch_funds():
@@ -28,7 +47,7 @@ def fetch_funds():
         df = df[df["基金代码"].astype(str).isin(FUND_CODES)]
     else:
         df = df[df["基金简称"].astype(str).apply(
-            lambda name: any(k in name for k in KEYWORDS)
+            lambda name: any(k in name for k in KEYWORDS) and is_target_fund(name)
         )]
     return df
 
