@@ -1,137 +1,11 @@
 {
-  "updated_at": "2026-09-30 16:56",
-  "count": 73,
+  "updated_at": "2026-09-30 17:05",
+  "count": 30,
   "funds": [
-    {
-      "code": "000055",
-      "name": "广发纳斯达克100ETF联接美元(QDII)A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "006480",
-      "name": "广发纳斯达克100ETF联接美元(QDII)C",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "012751",
-      "name": "建信纳斯达克100指数(QDII)A美元现汇",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "012753",
-      "name": "建信纳斯达克100指数(QDII)C美元现汇",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "015518",
-      "name": "华夏纳斯达克100ETF发起式联接(QDII)A美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "016056",
-      "name": "博时纳斯达克100ETF发起式联接(QDII)A美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "016058",
-      "name": "博时纳斯达克100ETF发起式联接(QDII)C美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "017092",
-      "name": "景顺长城纳斯达克科技ETF联接(QDII)A美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019174",
-      "name": "摩根纳斯达克100指数(QDII)美元现汇A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019175",
-      "name": "摩根纳斯达克100指数(QDII)美元现汇C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019738",
-      "name": "宝盈纳斯达克100指数发起(QDII)A美元现汇",
-      "purchase_status": "封闭期",
-      "redeem_status": "封闭期",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019739",
-      "name": "宝盈纳斯达克100指数发起(QDII)C美元现汇",
-      "purchase_status": "封闭期",
-      "redeem_status": "封闭期",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "021000",
-      "name": "南方纳斯达克100指数发起(QDII)I",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
     {
       "code": "021838",
       "name": "嘉实纳斯达克100ETF发起联接(QDII)I人民币",
       "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "022525",
-      "name": "天弘纳斯达克100指数发起(QDII)D",
-      "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "0.0",
       "daily_limit": 0.0,
@@ -147,141 +21,6 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "040047",
-      "name": "华安纳斯达克100ETF联接(QDII)A美元现钞",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "040048",
-      "name": "华安纳斯达克100ETF联接(QDII)A美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "159513",
-      "name": "纳斯达克100ETF大成",
-      "purchase_status": "场内交易",
-      "redeem_status": "场内交易",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "159632",
-      "name": "纳斯达克ETF华安",
-      "purchase_status": "场内交易",
-      "redeem_status": "场内交易",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "159659",
-      "name": "纳斯达克100ETF招商",
-      "purchase_status": "场内交易",
-      "redeem_status": "场内交易",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "513300",
-      "name": "纳斯达克ETF华夏",
-      "purchase_status": "场内交易",
-      "redeem_status": "场内交易",
-      "daily_limit_raw": "0.0",
-      "daily_limit": 0.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "003722",
-      "name": "易方达纳斯达克100ETF联接(QDII-LOF)A(美元现汇)",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "012871",
-      "name": "易方达纳斯达克100ETF联接(QDII-LOF)C(美元现汇)",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "016534",
-      "name": "嘉实纳斯达克100ETF发起联接(QDII)A美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "016535",
-      "name": "嘉实纳斯达克100ETF发起联接(QDII)C美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "017951",
-      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "017952",
-      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)美元现钞",
-      "purchase_status": "暂停申购",
-      "redeem_status": "暂停赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "018968",
-      "name": "汇添富纳斯达克100ETF发起式联接(QDII)美元现汇",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "018969",
-      "name": "汇添富纳斯达克100ETF发起式联接(QDII)美元现钞",
-      "purchase_status": "暂停申购",
-      "redeem_status": "暂停赎回",
-      "daily_limit_raw": "0.01",
-      "daily_limit": 0.01,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "006479",
-      "name": "广发纳斯达克100ETF联接人民币(QDII)C",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "2.0",
-      "daily_limit": 2.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "270042",
       "name": "广发纳斯达克100ETF联接人民币(QDII)A",
       "purchase_status": "暂停申购",
@@ -291,35 +30,8 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "014978",
-      "name": "华安纳斯达克100ETF联接(QDII)C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "5.0",
-      "daily_limit": 5.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "019524",
       "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "5.0",
-      "daily_limit": 5.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019525",
-      "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "5.0",
-      "daily_limit": 5.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "022664",
-      "name": "华泰柏瑞纳斯达克100ETF发起式联接(QDII)I",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "5.0",
@@ -338,15 +50,6 @@
     {
       "code": "000834",
       "name": "大成纳斯达克100ETF联接(QDII)A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "008971",
-      "name": "大成纳斯达克100ETF联接(QDII)C",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
@@ -381,26 +84,8 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "016453",
-      "name": "南方纳斯达克100指数发起(QDII)C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "018966",
       "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "018967",
-      "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币C",
       "purchase_status": "暂停申购",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
@@ -417,15 +102,6 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "019173",
-      "name": "摩根纳斯达克100指数(QDII)人民币C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "019441",
       "name": "万家纳斯达克100指数发起式(QDII)A",
       "purchase_status": "限大额",
@@ -435,26 +111,8 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "019442",
-      "name": "万家纳斯达克100指数发起式(QDII)C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "019547",
       "name": "招商纳斯达克100ETF发起式联接(QDII)A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "019548",
-      "name": "招商纳斯达克100ETF发起式联接(QDII)C",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
@@ -474,15 +132,6 @@
       "code": "019737",
       "name": "宝盈纳斯达克100指数发起(QDII)C人民币",
       "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "10.0",
-      "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "021773",
-      "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币E",
-      "purchase_status": "暂停申购",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
       "daily_limit": 10.0,
@@ -518,15 +167,6 @@
     {
       "code": "015299",
       "name": "华夏纳斯达克100ETF发起式联接(QDII)A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "100.0",
-      "daily_limit": 100.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "015300",
-      "name": "华夏纳斯达克100ETF发起式联接(QDII)C",
       "purchase_status": "暂停申购",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "100.0",
@@ -579,26 +219,8 @@
       "next_open_day": "NaT"
     },
     {
-      "code": "017895",
-      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币C",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "100.0",
-      "daily_limit": 100.0,
-      "next_open_day": "NaT"
-    },
-    {
       "code": "018043",
       "name": "天弘纳斯达克100指数发起(QDII)A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "100.0",
-      "daily_limit": 100.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "018044",
-      "name": "天弘纳斯达克100指数发起(QDII)C",
       "purchase_status": "暂停申购",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "100.0",
@@ -626,15 +248,6 @@
     {
       "code": "017436",
       "name": "华宝纳斯达克精选股票发起式(QDII)A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "2000.0",
-      "daily_limit": 2000.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "017437",
-      "name": "华宝纳斯达克精选股票发起式(QDII)C",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "2000.0",
