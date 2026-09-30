@@ -54,8 +54,14 @@
   <script>
     (function () {
       function fmtLimit(f) {
+        if (f.purchase_status.indexOf("暂停") !== -1) {
+          return "暂停申购";
+        }
         if (f.daily_limit === null || f.daily_limit === undefined) {
           return f.daily_limit_raw || "以公告为准";
+        }
+        if (f.daily_limit >= 100000000) {
+          return "暂无限额";
         }
         return f.daily_limit.toLocaleString("zh-CN") + " 元";
       }
@@ -63,11 +69,17 @@
       function buildArticle(data) {
         var d = data.updated_at.slice(5, 10).replace("-", "月") + "日";
         var rows = data.funds.map(function (f) {
+          var detail;
+          if (f.purchase_status.indexOf("暂停") !== -1) {
+            detail = '<strong style="color:#c0392b;">已暂停申购</strong>';
+          } else {
+            detail = '申购状态：' + f.purchase_status
+              + '，单日限购：<strong style="color:#c0392b;">' + fmtLimit(f) + '</strong>';
+          }
           return '<p style="margin:8px 0;font-size:15px;color:#3f3f3f;line-height:1.8;">'
             + '<strong style="color:#c07f2e;">' + f.name + '</strong>'
             + '（' + f.code + '）<br>'
-            + '申购状态：' + f.purchase_status + '，单日限购：<strong style="color:#c0392b;">'
-            + fmtLimit(f) + '</strong></p>';
+            + detail + '</p>';
         }).join("");
 
         return '<section style="font-family:-apple-system,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;">'
@@ -87,9 +99,15 @@
 
           document.getElementById("nq-tbody").innerHTML = data.funds.map(function (f) {
             var limited = f.purchase_status.indexOf("限") !== -1 || f.purchase_status.indexOf("暂停") !== -1;
+            var limitCell;
+            if (f.purchase_status.indexOf("暂停") !== -1) {
+              limitCell = '<td class="status-limit">—</td>';
+            } else {
+              limitCell = '<td class="limit-num">' + fmtLimit(f) + "</td>";
+            }
             return "<tr><td>" + f.name + "</td><td>" + f.code + "</td>"
               + '<td class="' + (limited ? "status-limit" : "status-open") + '">' + f.purchase_status + "</td>"
-              + '<td class="limit-num">' + fmtLimit(f) + "</td></tr>";
+              + limitCell + "</tr>";
           }).join("");
 
           document.getElementById("mp-article").innerHTML = buildArticle(data);
