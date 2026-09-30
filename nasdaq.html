@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>纳指基金限购日报</title>
+  <style>
+    body { margin: 0; background: #fafafa; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  </style>
+</head>
+<body>
+
+<section id="nasdaq-limit">
+  <style>
+    #nasdaq-limit { max-width: 760px; margin: 0 auto; padding: 24px 16px; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    #nasdaq-limit h2 { font-size: 20px; margin: 0 0 4px; color: #1a1a1a; }
+    #nasdaq-limit .update-time { color: #999; font-size: 13px; margin-bottom: 16px; }
+    #nasdaq-limit table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    #nasdaq-limit th, #nasdaq-limit td { padding: 10px 8px; border-bottom: 1px solid #eee; text-align: left; }
+    #nasdaq-limit th { color: #888; font-weight: normal; font-size: 13px; background: #faf7f2; }
+    #nasdaq-limit .limit-num { color: #c0392b; font-weight: 600; }
+    #nasdaq-limit .status-open { color: #27ae60; }
+    #nasdaq-limit .status-limit { color: #c0392b; }
+
+    /* —— 公众号文章预览区域 —— */
+    #nasdaq-limit .article-tools { margin: 36px 0 12px; display: flex; align-items: center; gap: 12px; }
+    #nasdaq-limit .article-tools h3 { font-size: 16px; margin: 0; color: #1a1a1a; }
+    #nasdaq-limit #copy-btn { padding: 8px 20px; font-size: 14px; color: #fff; background: #c07f2e; border: none; border-radius: 6px; cursor: pointer; }
+    #nasdaq-limit #copy-btn:hover { background: #a86f26; }
+    #nasdaq-limit #copy-tip { font-size: 13px; color: #999; }
+    #nasdaq-limit #mp-article { border: 1px dashed #ddd; border-radius: 8px; padding: 20px; background: #fff; }
+
+    .back-home { display: inline-block; margin: 24px 16px 0; font-size: 14px; color: #c07f2e; text-decoration: none; }
+    .back-home:hover { text-decoration: underline; }
+  </style>
+
+  <h2>纳斯达克 QDII 基金限购日报</h2>
+  <div class="update-time" id="nq-updated">数据加载中…</div>
+
+  <table>
+    <thead>
+      <tr><th>基金名称</th><th>代码</th><th>申购状态</th><th>单日限购</th></tr>
+    </thead>
+    <tbody id="nq-tbody"></tbody>
+  </table>
+
+  <div class="article-tools">
+    <h3>公众号文章预览</h3>
+    <button id="copy-btn" type="button">一键复制</button>
+    <span id="copy-tip"></span>
+  </div>
+  <div id="mp-article"></div>
+
+  <script>
+    (function () {
+      function fmtLimit(f) {
+        if (f.daily_limit === null || f.daily_limit === undefined) {
+          return f.daily_limit_raw || "以公告为准";
+        }
+        return f.daily_limit.toLocaleString("zh-CN") + " 元";
+      }
+
+      function buildArticle(data) {
+        var d = data.updated_at.slice(5, 10).replace("-", "月") + "日";
+        var rows = data.funds.map(function (f) {
+          return '<p style="margin:8px 0;font-size:15px;color:#3f3f3f;line-height:1.8;">'
+            + '<strong style="color:#c07f2e;">' + f.name + '</strong>'
+            + '（' + f.code + '）<br>'
+            + '申购状态：' + f.purchase_status + '，单日限购：<strong style="color:#c0392b;">'
+            + fmtLimit(f) + '</strong></p>';
+        }).join("");
+
+        return '<section style="font-family:-apple-system,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;">'
+          + '<h2 style="font-size:18px;color:#1a1a1a;margin:0 0 4px;">今日纳指限购日报 · ' + d + '</h2>'
+          + '<p style="font-size:13px;color:#999;margin:0 0 16px;">数据更新于 ' + data.updated_at + '</p>'
+          + rows
+          + '<p style="font-size:13px;color:#999;margin-top:20px;line-height:1.8;">'
+          + '* 数据来源：天天基金 / 各基金公司公告，仅供参考，不构成投资建议。实际限购额度以基金公司最新公告为准。'
+          + '</p></section>';
+      }
+
+      fetch("data.json?t=" + Date.now())
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          document.getElementById("nq-updated").textContent =
+            "更新于 " + data.updated_at + " · 共 " + data.count + " 只";
+
+          document.getElementById("nq-tbody").innerHTML = data.funds.map(function (f) {
+            var limited = f.purchase_status.indexOf("限") !== -1 || f.purchase_status.indexOf("暂停") !== -1;
+            return "<tr><td>" + f.name + "</td><td>" + f.code + "</td>"
+              + '<td class="' + (limited ? "status-limit" : "status-open") + '">' + f.purchase_status + "</td>"
+              + '<td class="limit-num">' + fmtLimit(f) + "</td></tr>";
+          }).join("");
+
+          document.getElementById("mp-article").innerHTML = buildArticle(data);
+
+          document.getElementById("copy-btn").addEventListener("click", function () {
+            var html = buildArticle(data);
+            var tip = document.getElementById("copy-tip");
+            if (navigator.clipboard && window.ClipboardItem) {
+              var item = new ClipboardItem({
+                "text/html": new Blob([html], { type: "text/html" }),
+                "text/plain": new Blob([document.getElementById("mp-article").innerText], { type: "text/plain" })
+              });
+              navigator.clipboard.write([item]).then(function () {
+                tip.textContent = "已复制，去公众号后台粘贴即可";
+              }, function () { tip.textContent = "复制失败，请手动全选预览内容复制"; });
+            } else {
+              var range = document.createRange();
+              range.selectNode(document.getElementById("mp-article"));
+              var sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(range);
+              document.execCommand("copy");
+              sel.removeAllRanges();
+              tip.textContent = "已复制，去公众号后台粘贴即可";
+            }
+          });
+        })
+        .catch(function () {
+          document.getElementById("nq-updated").textContent = "数据加载失败，请检查 data.json 是否存在";
+        });
+    })();
+  </script>
+</section>
+
+<a class="back-home" href="index.html">← 返回首页</a>
+
+</body>
+</html>
