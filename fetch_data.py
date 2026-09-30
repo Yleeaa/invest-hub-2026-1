@@ -5,6 +5,7 @@
 数据源：天天基金（东方财富），通过 akshare 免费获取。
 """
 import json
+import re
 from datetime import datetime, timezone, timedelta
 
 import akshare as ak
@@ -15,23 +16,28 @@ KEYWORDS = ["纳斯达克"]
 # 名称含以下关键词的直接排除（美元现汇/现钞份额等）
 EXCLUDE_KEYWORDS = ["美元"]
 
-# 非 A 类份额的后缀字母（C/E/I/D/B 类都排除，只留 A 类或无字母后缀的）
-NON_A_SUFFIXES = ("B", "C", "D", "E", "I")
-
 # 若想精确指定基金，可改为按代码筛选，例如：
 # FUND_CODES = ["015299", "016452", "161130", "270042"]
 FUND_CODES = []
 
+# 匹配名称中"独立的大写字母"（份额类别 A/C/D/E/I 等）。
+# 字母前后都不能紧邻其他大写字母，因此 ETF、LOF、QDII
+# 这类连续缩写里的字母不会被误认为份额类别。
+CLASS_LETTER_RE = re.compile(r"(?<![A-Z])[A-Z](?![A-Z])")
+
 
 def is_target_fund(name):
-    """只保留：场外、人民币、A类（或无份额后缀）的基金"""
+    """只保留：场外、人民币、A类（或没有份额类别字母）的基金"""
     if any(k in name for k in EXCLUDE_KEYWORDS):
         return False
     # 排除场内 ETF 本体（名字带 ETF 但不是联接基金的）
     if "ETF" in name and "联接" not in name:
         return False
-    # 排除非 A 类份额（名称以 C/E/I 等字母结尾的）
-    if name.strip()[-1] in NON_A_SUFFIXES:
+    # 识别名称中任意位置的份额类别字母，
+    # 例如 (QDII)C人民币、(QDII-LOF)C(人民币)、人民币C 等
+    # 只要出现非 A 的类别字母（C/D/E/I/B 等）就排除
+    classes = CLASS_LETTER_RE.findall(name)
+    if classes and any(c != "A" for c in classes):
         return False
     return True
 
@@ -77,8 +83,12 @@ def main():
             "next_open_day": str(row.get("下一开放日", "")).strip(),
         })
 
-    # 限购金额越小排越前（限购越严越靠前），无金额的排最后
-    funds.sort(key=lambda f: (f["daily_limit"] is None, f["daily_limit"] or 0))
+    # 排序：暂停申购的排最前，其余按限购金额从小到大（限购越严越靠前）
+    funds.sort(key=lambda f: (
+        "暂停" not in f["purchase_status"],
+        f["daily_limit"] is None,
+        f["daily_limit"] if f["daily_limit"] is not None else 0,
+    ))
 
     output = {
         "updated_at": now,
