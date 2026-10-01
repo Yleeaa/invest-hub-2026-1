@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30 17:14",
+  "updated_at": "2026-10-01 08:58",
   "count": 20,
   "funds": [
     {
@@ -120,6 +120,15 @@
       "next_open_day": "NaT"
     },
     {
+      "code": "017894",
+      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币A",
+      "purchase_status": "限大额",
+      "redeem_status": "开放赎回",
+      "daily_limit_raw": "10.0",
+      "daily_limit": 10.0,
+      "next_open_day": "NaT"
+    },
+    {
       "code": "019172",
       "name": "摩根纳斯达克100指数(QDII)人民币A",
       "purchase_status": "限大额",
@@ -162,15 +171,6 @@
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
       "daily_limit": 10.0,
-      "next_open_day": "NaT"
-    },
-    {
-      "code": "017894",
-      "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币A",
-      "purchase_status": "限大额",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "100.0",
-      "daily_limit": 100.0,
       "next_open_day": "NaT"
     },
     {
