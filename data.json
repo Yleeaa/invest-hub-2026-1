@@ -1,16 +1,7 @@
 {
-  "updated_at": "2026-10-12 08:52",
+  "updated_at": "2026-10-13 10:49",
   "count": 20,
   "funds": [
-    {
-      "code": "270042",
-      "name": "广发纳斯达克100ETF联接人民币(QDII)A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "2.0",
-      "daily_limit": 2.0,
-      "next_open_day": "NaT"
-    },
     {
       "code": "018966",
       "name": "汇添富纳斯达克100ETF发起式联接(QDII)人民币A",
@@ -158,6 +149,15 @@
     {
       "code": "019736",
       "name": "宝盈纳斯达克100指数发起(QDII)A人民币",
+      "purchase_status": "限大额",
+      "redeem_status": "开放赎回",
+      "daily_limit_raw": "10.0",
+      "daily_limit": 10.0,
+      "next_open_day": "NaT"
+    },
+    {
+      "code": "270042",
+      "name": "广发纳斯达克100ETF联接人民币(QDII)A",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
       "daily_limit_raw": "10.0",
