@@ -1,16 +1,7 @@
 {
-  "updated_at": "2026-10-21 08:16",
+  "updated_at": "2026-10-22 08:20",
   "count": 20,
   "funds": [
-    {
-      "code": "019441",
-      "name": "万家纳斯达克100指数发起式(QDII)A",
-      "purchase_status": "暂停申购",
-      "redeem_status": "开放赎回",
-      "daily_limit_raw": "5.0",
-      "daily_limit": 5.0,
-      "next_open_day": "NaT"
-    },
     {
       "code": "040046",
       "name": "华安纳斯达克100ETF联接(QDII)A",
@@ -108,6 +99,15 @@
       "redeem_status": "开放赎回",
       "daily_limit_raw": "100000000000.0",
       "daily_limit": 100000000000.0,
+      "next_open_day": "NaT"
+    },
+    {
+      "code": "019441",
+      "name": "万家纳斯达克100指数发起式(QDII)A",
+      "purchase_status": "限大额",
+      "redeem_status": "开放赎回",
+      "daily_limit_raw": "5.0",
+      "daily_limit": 5.0,
       "next_open_day": "NaT"
     },
     {
