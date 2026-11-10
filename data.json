@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 09:21",
+  "updated_at": "2026-11-10 11:54",
   "count": 20,
   "funds": [
     {
@@ -178,8 +178,8 @@
       "name": "华宝纳斯达克精选股票发起式(QDII)A",
       "purchase_status": "限大额",
       "redeem_status": "开放赎回",
-      "daily_limit_raw": "2000.0",
-      "daily_limit": 2000.0,
+      "daily_limit_raw": "200.0",
+      "daily_limit": 200.0,
       "next_open_day": "NaT"
     }
   ]
